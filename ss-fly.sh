@@ -309,13 +309,14 @@ install_config() {
 reboot_os() {
     echo
     echo -e "[${green}提示${plain}] 系统需要重启BBR才能生效。"
-    read -p "是否立马重启 [y/n]" is_reboot
-    if [[ ${is_reboot} == "y" || ${is_reboot} == "Y" ]]; then
-        reboot
-    else
-        echo -e "[${green}提示${plain}] 取消重启。其自行执行reboot命令。"
-        exit 0
-    fi
+    reboot
+    # read -p "是否立马重启 [y/n]" is_reboot
+    # if [[ ${is_reboot} == "y" || ${is_reboot} == "Y" ]]; then
+    #     reboot
+    # else
+    #     echo -e "[${green}提示${plain}] 取消重启。其自行执行reboot命令。"
+    #     exit 0
+    # fi
 }
 
 download_files() {
