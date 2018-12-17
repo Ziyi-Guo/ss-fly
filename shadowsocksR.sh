@@ -268,7 +268,7 @@ pre_install(){
     # read -p "Which protocol you'd select(Default: ${protocols[0]}):" protocol
     # [ -z "$protocol" ] && protocol=1
     echo -e "Set Default Protocal as origin"
-    protocols=1
+    protocol=1
     expr ${protocol} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Input error, please input a number"
